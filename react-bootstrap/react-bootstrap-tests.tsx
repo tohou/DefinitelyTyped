@@ -805,6 +805,7 @@ export class ReactBootstrapTest extends Component<any, any> {
                          help='Validation is based on string length.'
                          bsStyle="success"
                          hasFeedback
+                         list="datalist"
                          ref='input'
                          groupClassName='group-class'
                          labelClassName='label-class'
