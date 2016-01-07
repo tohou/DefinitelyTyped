@@ -543,17 +543,17 @@ React.createFactory(TransitionGroup)({ component: "div" });
 {
 // These are copied from https://facebook.github.io/react/docs/update.html
 let initialArray = [1, 2, 3];
-let newArray = update(initialArray, {$push: [4]}); // => [1, 2, 3, 4]
+let newArray = update.default(initialArray, {$push: [4]}); // => [1, 2, 3, 4]
 
 let collection = [1, 2, {a: [12, 17, 15]}];
-let newCollection = update(collection, {2: {a: {$splice: [[1, 1, 13, 14]]}}});
+let newCollection = update.default(collection, {2: {a: {$splice: [[1, 1, 13, 14]]}}});
 // => [1, 2, {a: [12, 13, 14, 15]}]
 
 let obj = {a: 5, b: 3};
-let newObj = update(obj, {b: {$apply: function(x) {return x * 2;}}});
+let newObj = update.default(obj, {b: {$apply: function(x) {return x * 2;}}});
 // => {a: 5, b: 6}
-let newObj2 = update(obj, {b: {$set: obj.b * 2}});
+let newObj2 = update.default(obj, {b: {$set: obj.b * 2}});
 
 let objShallow = {a: 5, b: 3};
-let newObjShallow = update(obj, {$merge: {b: 6, c: 7}}); // => {a: 5, b: 6, c: 7}
+let newObjShallow = update.default(obj, {$merge: {b: 6, c: 7}}); // => {a: 5, b: 6, c: 7}
 }
